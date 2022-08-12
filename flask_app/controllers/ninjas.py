@@ -9,12 +9,12 @@ def show_ninjas():
     return render_template('index.html', ninjas=ninjas, page_title='Ninjas')
 
 
-@app.route('/create_ninja')
+@app.route('/create/ninja')
 def create_ninja():
     return render_template('createninja.html', page_title='Create Ninja', dojos=Dojo.get_all())
 
 
-@app.route('/post_ninja', methods=['POST'])
+@app.route('/post/ninja', methods=['POST'])
 def post_ninja():
     Ninja.save(request.form)
     return redirect(f"/dojo/{request.form['dojo_id']}")

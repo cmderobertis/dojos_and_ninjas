@@ -8,7 +8,7 @@
           <h3 class="card-title">Create Dojo</h3>
         </div>
         <div class="card-body mx-2">
-          <form action="/post_dojo" method="post">
+          <form action="/post/dojo" method="post">
             <div class="form-group row">
               <input
                 type="text"
@@ -19,7 +19,11 @@
                 required
               />
             </div>
-            <input class="mt-3 btn btn-primary" type="submit" value="Submit" />
+            <input
+              class="mt-3 btn btn-primary rounded-pill"
+              type="submit"
+              value="Submit"
+            />
           </form>
         </div>
       </div>
@@ -58,6 +62,9 @@
           </table>
         </div>
       </div>
+      <a href="/create/ninja" class="btn btn-primary rounded-pill"
+        >Create Ninja</a
+      >
     </div>
   </div>
 </div>

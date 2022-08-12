@@ -17,7 +17,7 @@ def show_dojos():
     return render_template('index.html', dojos=dojos, page_title='Dojos', ninjas_per_dojo=ninjas_per_dojo)
 
 
-@app.route('/post_dojo', methods=['POST'])
+@app.route('/post/dojo', methods=['POST'])
 def post_dojo():
     Dojo.save(request.form)
     return redirect('/dojos')
@@ -29,7 +29,7 @@ def show_dojo(id):
     return render_template('ninjas.html', dojo=dojo)
 
 
-@app.route('/update_dojo', methods=['POST'])
+@app.route('/update/dojo', methods=['POST'])
 def post_update():
     Dojo.update(request.form)
     return redirect(f"/dojo/{request.form['id']}")
